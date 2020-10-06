@@ -31,8 +31,8 @@ module.exports = function toReadable(num) {
         100: 'hundred',
     };
     const getFromObj = num => NUMBERS[num];
-    const lessThen100 = num => (num <= 20 || num % 10 === 0) ? getFromObj(num) : `${getFromObj(Math.floor(num / 10) * 10)} ${getFromObj(num % 10)}`
-    const moreThen100 = num => `${getFromObj(Math.floor(num / 100))} hundred`
+    const lessThen100 = num => (num <= 20 || num % 10 === 0) ? getFromObj(num) : `${getFromObj(Math.floor(num / 10) * 10)} ${getFromObj(num % 10)}`;
+    const moreThen100 = num => `${getFromObj(Math.floor(num / 100))} hundred`;
 
     if (num <= 20) { return getFromObj(num); }
 
